@@ -34,7 +34,8 @@ loginButton.addEventListener ("click" , function login  ()  {
 
 
             alert ("Login Berhasil")
-            localStorage.setItem("user", userJSON)
+         //   localStorage.setItem("user", userJSON)
+           localStorage.user = userJSON
             window.location.href = "index.html"
             
         } else {

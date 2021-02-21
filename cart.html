@@ -51,7 +51,7 @@
   <body>
 
 
-    <div class="customContainer d-flex flex-column justify-content-between h-100">
+    <div class="d-flex flex-column justify-content-between h-100">
     
 
     <!-- Navigasi start -->
@@ -64,9 +64,9 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
                 
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link "  href="index.html">Home</a>
                 <a class="nav-link" href="product.html">Catalog</a>
-                <a class="nav-link" href="cart.html">Cart</a>
+                <a class="nav-link active" aria-current="page" href="cart.html">Cart</a>
                 <a class="nav-link" href="testimoni.html" >Customers</a>
                 <a class="nav-link" href="aboutus.html">About</a>
 
@@ -129,10 +129,37 @@
           <table class="table table-sm" id="tesTable">
             
           </table>
+
+          <div class="container mt-3 text-center ">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-dark hide" data-bs-toggle="modal" data-bs-target="#exampleModal" id="customModal">
+              Payment
+        </button>
+      </div>
+
         </div>
     </div>
 
-    <!-- User's cart display end -->      
+    <!-- User's cart display end -->  
+
+   
+    
+       <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center fs-4 m-3">
+        Payment Confirmed
+      </div>
+      <div class="modal-footer border-0">
+        
+      </div>
+    </div>
+  </div>
+</div>
     
 
 

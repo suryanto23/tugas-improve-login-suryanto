@@ -8,6 +8,7 @@ submitRegister = () => {
     let emailForm = document.querySelector("#registerEmailForm").value;
     let passwordForm = document.querySelector("#registerPasswordForm").value;
     let passwordConfirm = document.querySelector("#registerPasswordConfirm").value;
+    let regexEmail = /\S+@\S+\.\S+/;
 
     if (nameForm == "" || emailForm == "" || passwordForm == "" || passwordConfirm == "") {
 
@@ -15,10 +16,22 @@ submitRegister = () => {
         return;
 
     } else if (passwordForm !== passwordConfirm ) {
+
         alert ("Password does not match!")
         document.querySelector("#registerPasswordForm").value = "";
         document.querySelector("#registerPasswordConfirm").value = "";
         return;
+
+    } else if (regexEmail.test(emailForm) == false) {
+
+        alert ("Invalid email format!")
+        return;
+
+    } else if (passwordForm.length < 5){
+
+        alert ("Password minimal 5 karakter")
+        return;
+
     }
 
     let dataObj = {

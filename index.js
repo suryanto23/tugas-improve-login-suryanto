@@ -41,23 +41,25 @@ if (local) {
     logoutButton.setAttribute("class" , "btn border-danger text-danger  unhide ")
     logoutGreetings.innerHTML = `Halo ${localObj.name}`
 
+    showCart = () => {
+
+        fetch (`https://6023a8436bf3e6001766b514.mockapi.io/login-app/${localObj.id}/barang`)
+    
+        .then (result => result.json())
+        .then (data => {
+    
+            cartItem.innerHTML = "🛒" +data.length
+    
+    
+        } )
+    
+    }
+    
+    showCart()
+    
+
 }
 
-showCart = () => {
-
-    fetch (`https://6023a8436bf3e6001766b514.mockapi.io/login-app/${localObj.id}/barang`)
-
-    .then (result => result.json())
-    .then (data => {
-
-        cartItem.innerHTML = "🛒" +data.length
-
-
-    } )
-
-}
-
-showCart()
 
 
 

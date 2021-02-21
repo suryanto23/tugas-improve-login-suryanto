@@ -5,6 +5,7 @@ let loginButtonHome = document.querySelector("#loginButtonHome");
 let registerButtonHome = document.querySelector("#registerButtonHome");
 let logoutGreetings = document.querySelector("#logoutGreetings");
 let logoutButton = document.querySelector("#logoutButton");
+let customModal = document.querySelector("#customModal");
 
 
  let local = localStorage.getItem("user")
@@ -35,6 +36,7 @@ if (local) {
     registerButtonHome.setAttribute("class" , "hide")
     logoutGreetings.setAttribute("class" , "btn btn-dark unhide")
     logoutButton.setAttribute("class" , "btn border-danger text-danger unhide")
+    customModal.setAttribute("class" , "btn btn-dark unhide")
     logoutGreetings.innerHTML = `Halo ${localObj.name}`
 
 }
@@ -72,7 +74,7 @@ const userDisplayCart = () => {
 
         let displayTable = document.getElementById("tesTable")
 
-        console.log(displayTable);
+        
 
         data.forEach(items => {
         
