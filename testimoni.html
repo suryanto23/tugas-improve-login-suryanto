@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!-- CSS Tambahan -->
+    <link rel="stylesheet" href="adding-style.css">
+
+    <title>Testimonial</title>  
+
+    <style>
+
+   .navbar-nav .navButton {
+       
+       position: fixed;
+       right: 20px;
+       
+     }
+
+     .hide {
+       display: none;
+     }
+
+     .unhide {
+       display: inline-block;
+     }
+
+     #logoutGreetings {
+       text-transform: uppercase;
+     }
+    </style>
+
+
+  </head>
+  <body>
+    
+
+    <!-- Navigasi start -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">NU-SANTARA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link" href="product.html">Catalog</a>
+                    <a class="nav-link" href="cart.html">Cart</a>
+                    <a class="nav-link" href="testimoni.html" >Customers</a>
+                    <a class="nav-link" href="aboutus.html">About</a>
+
+                     <!-- Menu login -->
+                <div class="navButton">
+                    <button type="button" class="btn btn-light" id="loginButtonHome" onclick="loginForm()">Login</button>
+                    <button type="button" class="btn btn-primary" id="registerButtonHome" onclick="registerForm()">Register</button>
+                   </div>
+                 
+                   <div class="navButton">
+                    <button class="hide" id="logoutGreetings"></button>
+                    <button class="hide" id="cartItem" onclick="checkout()">0</button>
+                    <button type="button" class="btn border-danger text-danger hide" id="logoutButton" onclick="logout()">LOG OUT</button>
+                   </div>
+                
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navigasi end -->
+
+  <section class="banner section-medium section-arrow--bottom-center section-arrow-dark-color">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-white text-center">
+                <h2 class="section-title"> What Others Say About Us</h2>
+                <p class="section-sub-title">
+                    NU-SANTARA - where expert culinary skills and modern technology come together
+                    <br> to provide an alluring ambience of flavor like no others
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section-primary t-bordered">
+    <div class="container">
+        <div class="row testimonial-three testimonial-three--col-three">
+            <div class="col-md-4 testimonial-three-col">
+                <div class="testimonial-inner">
+                    <div class="testimonial-image" itemprop="image">
+                        <img width="180" height="180" src="https://bootdey.com/img/Content/avatar/avatar1.png">
+                    </div>
+                    <div class="testimonial-content">
+                        <p>
+                            Thank you for your food. It’s so fresh and delicious and it takes the work and guess-work out of my busy life when it comes to eating. Awesome Foods is AWESOME! You have a customer for life!
+                        </p>
+                    </div>
+                    <div class="testimonial-meta">
+                        <strong class="testimonial-name" itemprop="name">Coyote E Stark</strong>
+                        <span class="testimonial-job-title" itemprop="jobTitle">Writer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 testimonial-three-col">
+                <div class="testimonial-inner">
+                    <div class="testimonial-image" itemprop="image">
+                        <img width="180" height="180" src="https://bootdey.com/img/Content/avatar/avatar2.png">
+                    </div>
+
+                    <div class="testimonial-content">
+                        <p>
+                            This place is great! Atmosphere is chill and cool but the staff is also really friendly. They know what they’re doing and what they’re talking about, and you can tell making the customers happy is their main priority. Food is pretty good, some Indonesian classics and some twists, and for their prices it’s 100% worth it.
+                        </p>
+                    </div>
+
+                    <div class="testimonial-meta">
+                        <strong class="testimonial-name" itemprop="name">Ulquiorra Schiffer</strong>
+                        <span class="testimonial-job-title" itemprop="jobTitle">Painter</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 testimonial-three-col">
+                <div class="testimonial-inner">
+                    <div class="testimonial-image" itemprop="image">
+                        <img width="180" height="180" src="https://bootdey.com/img/Content/avatar/avatar3.png">
+                    </div>
+                    <div class="testimonial-content">
+                        <p>
+                            Do yourself a favor and visit this lovely food service. The service is unmatched. The staff truly cares about your experience. The food is absolutely amazing – everything we tasted melted in other mouths. Absolutely the best meal we had. Highly recommend!
+                        </p>
+                    </div>
+                    <div class="testimonial-meta">
+                        <strong class="testimonial-name" itemprop="name">Tia Harribel</strong>
+                        <span class="testimonial-job-title" itemprop="jobTitle">Athlete</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 testimonial-three-col">
+                <div class="testimonial-inner">
+                    <div class="testimonial-image" itemprop="image">
+                        <img width="180" height="180" src="https://bootdey.com/img/Content/avatar/avatar4.png">
+                    </div>
+
+                    <div class="testimonial-content">
+                        <p>
+                            Amazing experience! If you thought gourmet kitchen will leave you hungry, think again. You should skip several meals before visiting this amazing restaurant. Everything is so tasty, you cannot restraint yourself from having all of the dishes.
+                        </p>
+                    </div>
+
+                    <div class="testimonial-meta">
+                        <strong class="testimonial-name" itemprop="name">Barragan Luisenbarn</strong>
+                        <span class="testimonial-job-title" itemprop="jobTitle">Designer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 testimonial-three-col">
+                <div class="testimonial-inner">
+                    <div class="testimonial-image" itemprop="image">
+                        <img width="180" height="180" src="https://bootdey.com/img/Content/avatar/avatar5.png">
+                    </div>
+                    <div class="testimonial-content">
+                        <p>
+                            Delicious food, the staff are very helpful, and super nice selection of spices. Plus it’s all at an affordable price. Can totally recommend it and will definitely come back again.
+                        </p>
+                    </div>
+                    <div class="testimonial-meta">
+                        <strong class="testimonial-name" itemprop="name">Jugram Haschwalt</strong>
+                        <span class="testimonial-job-title" itemprop="jobTitle">Lawyer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 testimonial-three-col">
+                <div class="testimonial-inner">
+                    <div class="testimonial-image" itemprop="image">
+                        <img width="180" height="180" src="https://bootdey.com/img/Content/avatar/avatar6.png">
+                    </div>
+
+                    <div class="testimonial-content">
+                        <p>
+                            Excellent, unassuming and wonderful find. Great variety and fine value tasting menu. Exciting food with high quality presentation, service and inventivenes. Order now  it’s really worth it.
+                        </p>
+                    </div>
+
+                    <div class="testimonial-meta">
+                        <strong class="testimonial-name" itemprop="name">Robert Accutrone</strong>
+                        <span class="testimonial-job-title" itemprop="jobTitle">Gym Trainer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+      <!-- Membuat footer start -->
+      <footer class="bg-light text-center text-lg-start mt-5">           
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2021 Faay-Suryanto: <strong>All Right Reserved</strong> 
+        </div>   
+      </footer> 
+      <!-- Membuat footer end -->
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <script src="testimoni.js"></script>
+
+
+
+    <!-- Script js bawaan dari bootstrap (DONT TOUCH FOR SAFETY) -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

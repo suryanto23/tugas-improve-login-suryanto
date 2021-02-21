@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>Food Catalog</title>
+    <style>
+      .bgheader{
+            background-image: url("images/banner.jpg");
+            background-size: cover;
+        }
+
+       .btn {
+          margin-bottom: 20px;
+        }
+
+        .card img{
+          align-self: center;
+        }
+
+        .card img:hover{
+          opacity: 0.8;
+          transition: 0.2s;
+        }
+
+        .card .btn:hover{
+          color: tomato;
+        }
+
+        .navbar-nav .navButton {
+       
+       position: fixed;
+       right: 20px;
+       
+     }
+
+     .hide {
+       display: none;
+     }
+
+     .unhide {
+       display: inline-block;
+     }
+
+     #logoutGreetings {
+       text-transform: uppercase;
+     }
+    </style>
+  </head>
+  <body>
+    
+
+    <!-- Navigasi start -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="#">NU-SANTARA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link" href="product.html">Catalog</a>
+                <a class="nav-link" href="cart.html">Cart</a>
+                <a class="nav-link" href="testimoni.html" >Customers</a>
+                <a class="nav-link" href="aboutus.html">About</a>
+
+                 <!-- Menu login -->
+                 <div class="navButton">
+                  <button type="button" class="btn btn-light" id="loginButtonHome" onclick="loginForm()">Login</button>
+                  <button type="button" class="btn btn-primary" id="registerButtonHome" onclick="registerForm()">Register</button>
+                 </div>
+               
+                 <div class="navButton">
+                  <button class="hide" id="logoutGreetings"></button>
+                  <button class="hide" id="cartItem" onclick="checkout()">0</button>
+                  <button type="button" class="btn border-danger text-danger hide" id="logoutButton" onclick="logout()">LOG OUT</button>
+                 </div>
+                
+              
+              </div>
+          </div>
+      </div>
+    </nav>
+  <!-- Nasvigasi end -->
+
+
+
+
+  
+  <!-- Katalog start -->
+  <!-- Banner -->
+  <section class="py-5 text-center bgheader">
+
+    <div class="container">
+        <div class="row py-lg-5">
+            <div class="text-light mx-auto">
+              <h1 class="fw-dark fc display-1">Our Wide Selection</h1>
+              <p class="lead fc ">In modern day and age technology made human life easier-including buying food online. We from NU-SANTARA commited only to serve 
+                traditional indonesian food blended with modern technology to guarantee your satisfication. 
+              </p>
+            </div>
+        </div>
+    </div>
+
+  </section>
+
+
+
+  <!-- Warisan mas Faay -->
+  <!-- <div class="album py-5">
+
+      <div class="container ">
+          <div id="namaMakanan" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          </div>
+      </div>
+
+  </div> -->
+
+  <div class="album p-5 d-flex justify-content-center">
+
+    <div class="container">
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="display">
+    </div>
+
+  </div>
+
+  </div>
+
+
+  <!-- Katalog end -->
+
+      <!-- Membuat footer start -->
+      <footer class="bg-light text-center text-lg-start mt-5">           
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+          © 2021 Faay-Suryanto: <strong>All Right Reserved</strong>
+        </div>   
+      </footer> 
+      <!-- Membuat footer end -->
+
+
+    
+<script src="product.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Script js bawaan dari bootstrap (DONT TOUCH FOR SAFETY) -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+ 
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
