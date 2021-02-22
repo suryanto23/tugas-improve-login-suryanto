@@ -123,22 +123,45 @@
 
    <!-- User's cart display -->
 
-    <div class="container">
+    <div class= "container">
 
         <div class="row " id="display">
-          <table class="table table-sm" id="tesTable">
+          
+          <table class="table table-sm  " id="tesTable">
             
           </table>
+        
 
-          <div class="container mt-3 text-center ">
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-dark hide" data-bs-toggle="modal" data-bs-target="#exampleModal" id="customModal">
-              Payment
-        </button>
-      </div>
+
+          <div class="container">
+
+            <div class="row text-center" >
+
+            <table class="hide" id="displayTotal">
+              
+              
+              <tr>
+                
+                <td class="col-1 text-start"> <h5 class="fw-bold">Total</h5></td>
+                <td class="col-1 text-start ps-5 fw-bold" ><p id="displayTotalHarga">Harga : </p></td>
+                <td class="col-1 text-center"> <button type="button" class="btn btn-sm btn-dark hide" data-bs-toggle="modal" data-bs-target="#exampleModal" id="customModal">Payment</button></td>
+              
+              </tr>
+            
+
+
+           </table>
+
+            </div>
+
+          </div>
+
+
+
 
         </div>
-    </div>
+     </div>
+
 
     <!-- User's cart display end -->  
 

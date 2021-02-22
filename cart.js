@@ -38,6 +38,7 @@ if (local) {
     logoutButton.setAttribute("class" , "btn border-danger text-danger unhide")
     customModal.setAttribute("class" , "btn btn-dark unhide")
     logoutGreetings.innerHTML = `Halo ${localObj.name}`
+    displayTotal.setAttribute("class" , " table table-sm table-borderless ")
 
 }
 
@@ -45,6 +46,8 @@ if (local) {
 
 const userDisplayCart = () => {
 
+
+    let totalHarga = 0;
 
     
     
@@ -73,6 +76,8 @@ const userDisplayCart = () => {
         console.log(data);
 
         let displayTable = document.getElementById("tesTable")
+        let displayTotalHarga = document.getElementById("displayTotalHarga")
+        let displayTotal = document.getElementById("displayTotal")
 
         
 
@@ -80,17 +85,27 @@ const userDisplayCart = () => {
         
             let createDiv = document.createElement("TR")
 
+            
+
     
             
-            createDiv.innerHTML = `                           
-                                <td><h5 class="fw-light">${items.produk}</h5></td>
-                                <td><p>Harga : ${items.harga}</p></td>
-                                <td><button class="btn btn-outline-dark btn-sm"  type="button" onclick = "deleteItem(${items.id})">delete</button></td>
+            createDiv.innerHTML = `     
+
+                                <tbody>                      
+                                <td class=" col-4"><h5 class="fw-light">${items.produk}</h5></td>
+                                <td class="col-4 ps-5"><p>Harga : ${items.harga}</p></td>
+                                <td class="col-4 text-center"><button class="btn btn-outline-dark btn-sm"  type="button" onclick = "deleteItem(${items.id})">delete</button></td>
+                                </tbody>
                                 `
 
             displayTable.appendChild(createDiv)
 
+            
+            totalHarga += items.harga
+
         });
+
+        displayTotalHarga.innerHTML = "Total : " +totalHarga
 
         
     })
